@@ -10,16 +10,18 @@ export default defineConfig({
       manifest: {
         name: "Budget-App",
         short_name: "Budget",
-        theme_color: "#333333",
-        background_color: "#160312",
+        display: "fullscreen",
+        orientation: "landscape",
+        theme_color: "aliceblue",
+        background_color: "red",
         description:
           "This budget app is a tool to keep reflected in monetary amounts, expenses and current income of a specific person.",
         lang: "es",
         icons: [
           {
-            src: "./assets/favicon.svg",
-            sizes: "212x150",
-            type: "image/svg+xml",
+            src: "./assets/favicon.ico",
+            sizes: "255x247",
+            type: "image/x-ico",
             purpose: "any",
           },
         ],
