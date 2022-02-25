@@ -1,0 +1,11 @@
+{
+  "short_name": "Budget",
+  "name": "Budget App",
+  "icons": [
+    {
+      "src": "assets/favicon.ico",
+      "sizes": "256x256",
+      "type": "image/x-icon"
+    }
+  ]
+}
