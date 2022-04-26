@@ -10,9 +10,9 @@ Be kind to one another. We're striving to make [Conventional Commits](https://ww
 
 Conventional Commits use the [GitHub flow](https://guides.github.com/introduction/flow/) as main versioning workflow
 
-1. Fork the [Palm Tree Frontend](https://github.com/PuzzlerDev/palm-tree-css-frontend) repository.
+1. Fork the [Budget App](https://github.com/Edwardb11/budget-app) repository.
 2. Create a new branch for each feature, fix or improvement.
-3. Send a pull request from each feature branch to **dev** branch.
+3. Send a pull request from each feature branch to **develop** branch.
 
 It is very important to separate new features or improvements into separate feature branches, and to send a pull request for each branch.
 
