@@ -1,7 +1,37 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import { VitePWA } from 'vite-plugin-pwa';
+import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()]
-})
+  plugins: [
+    react(),
+    VitePWA({
+      manifest: {
+        includeAssets: [
+          'assets/favicon.ico',
+          'favicon.svg',
+          'favicon.ico',
+          'robots.txt',
+          'apple-touch-icon.png',
+        ],
+        name: 'Budget-App',
+        short_name: 'Budget',
+        display: 'fullscreen',
+        orientation: 'landscape',
+        theme_color: 'aliceblue',
+        background_color: 'red',
+        description:
+          'This budget app is a tool to keep reflected in monetary amounts, expenses and current income of a specific person.',
+        lang: 'es',
+        icons: [
+          {
+            src: 'assets/favicon.ico',
+            sizes: '256x256',
+            type: 'image/x-icon',
+          },
+        ],
+      },
+    }),
+  ],
+});
