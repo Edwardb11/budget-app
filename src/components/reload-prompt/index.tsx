@@ -1,21 +1,19 @@
 // eslint-disable-next-line no-use-before-define
-import React from "react";
-import "./ReloadPrompt.css";
+import { useRegisterSW } from 'virtual:pwa-register/react';
+import './styles.css';
 
-import { useRegisterSW } from "virtual:pwa-register/react";
-
-function ReloadPrompt() {
+const ReloadPrompt = () => {
   const {
     offlineReady: [offlineReady, setOfflineReady],
     needRefresh: [needRefresh, setNeedRefresh],
     updateServiceWorker,
   } = useRegisterSW({
-    onRegistered(r) {
+    onRegistered(r: ServiceWorkerRegistration | undefined) {
       // eslint-disable-next-line prefer-template
-      console.log("SW Registered: " + r);
+      console.log('SW Registered: ' + r);
     },
-    onRegisterError(error) {
-      console.log("SW registration error", error);
+    onRegisterError(error: Error) {
+      console.log('SW registration error', error);
     },
   });
 
@@ -25,10 +23,10 @@ function ReloadPrompt() {
   };
 
   return (
-    <div className="ReloadPrompt-container">
+    <div className='ReloadPrompt-container'>
       {(offlineReady || needRefresh) && (
-        <div className="ReloadPrompt-toast">
-          <div className="ReloadPrompt-message">
+        <div className='ReloadPrompt-toast'>
+          <div className='ReloadPrompt-message'>
             {offlineReady ? (
               <span>App ready to work offline</span>
             ) : (
@@ -39,19 +37,19 @@ function ReloadPrompt() {
           </div>
           {needRefresh && (
             <button
-              className="ReloadPrompt-toast-button"
+              className='ReloadPrompt-toast-button'
               onClick={() => updateServiceWorker(true)}
             >
               Reload
             </button>
           )}
-          <button className="ReloadPrompt-toast-button" onClick={() => close()}>
+          <button className='ReloadPrompt-toast-button' onClick={() => close()}>
             Close
           </button>
         </div>
       )}
     </div>
   );
-}
+};
 
 export default ReloadPrompt;
