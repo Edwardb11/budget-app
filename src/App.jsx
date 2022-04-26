@@ -1,45 +1,14 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { Center } from "@chakra-ui/react";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
-  )
+    <>
+      <Center bg="tomato" h="50px" color="white">
+        Hello world from Chakra UI!
+      </Center>
+      <h1 className="text-3xl font-bold underline text-center ">
+        Hello world from Tailwind CSS!
+      </h1>
+    </>
+  );
 }
-
-export default App

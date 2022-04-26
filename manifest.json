@@ -1,0 +1,17 @@
+{
+  "name": "Budget-App",
+  "short_name": "Budget",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "theme_color": "aliceblue",
+  "background_color": "red",
+  "description": "This budget app is a tool to keep reflected in monetary amounts, expenses and current income of a specific person.",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "assets/favicon.ico",
+      "sizes": "256x256",
+      "type": "image/x-icon"
+    }
+  ]
+}
