@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material'
+import { Typography, Button } from '@mui/material'
 import { useAppState } from '../hooks/app-recoil'
 
 function Home() {
@@ -6,11 +6,18 @@ function Home() {
 
   return (
     <div>
-      <Typography>Home</Typography>
+      <Typography fontWeight="medium" variant="h4">
+        Home
+      </Typography>
       <p>State: {state}</p>
-      <button type="button" onClick={() => setState('Home state')}>
-        setState Home
-      </button>
+      <Button
+        variant="contained"
+        color="primary"
+        type="button"
+        onClick={() => setState('Home state')}
+      >
+        set state
+      </Button>
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Typography } from '@mui/material'
 import { useGetAppState } from '../hooks/app-recoil'
 
 function NoMatch() {
@@ -6,11 +7,11 @@ function NoMatch() {
 
   return (
     <div>
-      <h1>Error 404</h1>
-      <h3>State: {state}</h3>
-      <p>
-        <Link to="/">Go to the home</Link>
-      </p>
+      <Typography fontWeight="medium" variant="h4">
+        Error 404
+      </Typography>
+      <p>State: {state}</p>
+      <Link to="/">Go to the home</Link>
     </div>
   )
 }

@@ -1,3 +1,5 @@
+import { Typography, Button } from '@mui/material'
+
 import { useAppState } from '../hooks/app-recoil'
 
 function About() {
@@ -5,11 +7,18 @@ function About() {
 
   return (
     <div>
-      <h1>About</h1>
+      <Typography fontWeight="medium" variant="h4">
+        About
+      </Typography>
       <p>State: {state}</p>
-      <button type="button" onClick={() => setState('About state')}>
-        setState
-      </button>
+      <Button
+        variant="contained"
+        color="primary"
+        type="button"
+        onClick={() => setState('About state')}
+      >
+        set state
+      </Button>
     </div>
   )
 }
