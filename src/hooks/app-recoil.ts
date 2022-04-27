@@ -2,7 +2,7 @@ import { atom, useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil'
 
 const appState = atom({
   key: 'appState',
-  default: 'Initial state',
+  default: 'Initial state'
 })
 
 // Get the values

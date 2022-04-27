@@ -1,15 +1,18 @@
-import { useAppState } from '../hooks/app-recoil';
+import { Typography } from '@mui/material'
+import { useAppState } from '../hooks/app-recoil'
 
-const Home = () => {
-  const [state, setState] = useAppState();
+function Home() {
+  const [state, setState] = useAppState()
 
   return (
     <div>
-      <h1>Home</h1>
+      <Typography>Home</Typography>
       <p>State: {state}</p>
-      <button onClick={() => setState('Home state')}>setState Home</button>
+      <button type="button" onClick={() => setState('Home state')}>
+        setState Home
+      </button>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
