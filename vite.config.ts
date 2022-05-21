@@ -8,13 +8,6 @@ export default defineConfig({
     react(),
     VitePWA({
       manifest: {
-        includeAssets: [
-          'assets/favicon.ico',
-          'favicon.svg',
-          'favicon.ico',
-          'robots.txt',
-          'apple-touch-icon.png'
-        ],
         name: 'Budget-App',
         short_name: 'Budget',
         display: 'fullscreen',
