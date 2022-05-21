@@ -1,5 +1,5 @@
 import { Typography, Button } from '@mui/material'
-import { useAppState } from '../hooks/app-recoil'
+import { useAppState } from '../hooks'
 
 function Home() {
   const [state, setState] = useAppState()
