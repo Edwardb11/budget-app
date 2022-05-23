@@ -3,10 +3,29 @@
 /.pnp
 .pnp.js
 package-lock.json
+npm-debug.log
+ui-debug.log
+yarn.lock
+.npmrc
+.DS_Store
+.idea
+*.iml
+*.tgz
+scripts/*.json
+lib/
+dev/
 
 # testing
 /coverage
+/.coverage
 
 # production
 /build
 /dist
+
+# vscode
+/.vscode
+
+# firebase
+firebase-debug.log
+firebase-debug.*.log
