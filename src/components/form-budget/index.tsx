@@ -7,7 +7,7 @@ import Select, { SelectChangeEvent } from '@mui/material/Select'
 import { useState } from 'react'
 import { Button } from '@mui/material'
 
-export default function SelectLabels() {
+function Formfield() {
   const [budgetAction, setBudgetAction] = useState('')
   const [amount, setAmount] = useState('')
   const [description, setDescription] = useState('')
@@ -53,3 +53,5 @@ export default function SelectLabels() {
     </div>
   )
 }
+
+export default Formfield
