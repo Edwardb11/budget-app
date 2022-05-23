@@ -40,6 +40,7 @@ function CardTitle() {
         >
           0.00
         </Typography>
+        <hr />
         <Typography
           style={{
             display: 'flex'
@@ -59,6 +60,7 @@ function CardTitle() {
         >
           0.00
         </Typography>
+        <hr />
       </CardContent>
       <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
         <Button size="small">Copy</Button>

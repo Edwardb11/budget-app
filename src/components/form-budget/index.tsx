@@ -5,6 +5,7 @@ import FormHelperText from '@mui/material/FormHelperText'
 import FormControl from '@mui/material/FormControl'
 import Select, { SelectChangeEvent } from '@mui/material/Select'
 import { useState } from 'react'
+import { Button } from '@mui/material'
 
 export default function SelectLabels() {
   const [budgetAction, setBudgetAction] = useState('')
@@ -24,7 +25,7 @@ export default function SelectLabels() {
   return (
     <div>
       <FormControl sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel>budget to add</InputLabel>
+        <InputLabel>Budget to add</InputLabel>
         <Select value={budgetAction} onChange={handleChangeBudget}>
           <MenuItem value="+">Entry</MenuItem>
           <MenuItem value="-">Egress</MenuItem>
@@ -46,6 +47,9 @@ export default function SelectLabels() {
           label="Description"
         />
       </FormControl>
+      <Button style={{ marginTop: '20px' }} variant="contained" color="success">
+        Save
+      </Button>{' '}
     </div>
   )
 }
