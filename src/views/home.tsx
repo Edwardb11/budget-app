@@ -1,24 +1,23 @@
-import { Typography, Button } from '@mui/material'
-import { useAppState } from '../hooks/app-recoil'
+import Grid from '@mui/material/Grid'
+import CardTitle from '../components/card'
+import { Formfield } from '../components'
 
 function Home() {
-  const [state, setState] = useAppState()
-
   return (
-    <div>
-      <Typography fontWeight="medium" variant="h4">
-        Home
-      </Typography>
-      <p>State: {state}</p>
-      <Button
-        variant="contained"
-        color="primary"
-        type="button"
-        onClick={() => setState('Home state')}
-      >
-        set state
-      </Button>
-    </div>
+    <Grid
+      container
+      spacing={2}
+      style={{ backgroundColor: 'aqua' }}
+      direction="column"
+      alignItems="center"
+    >
+      <Grid item xs={6} md={8}>
+        <CardTitle />
+      </Grid>
+      <Grid item xs={6} xl={8}>
+        <Formfield />
+      </Grid>
+    </Grid>
   )
 }
 
