@@ -2,17 +2,18 @@
   "name": "budget-app",
   "private": true,
   "version": "0.0.0",
+  "main": "./src/main.tsx",
   "scripts": {
     "start": "vite --open",
     "build": "vite build",
     "preview": "vite preview",
     "test": "echo \"Error: no test specified\"",
-    "lint": "npx eslint ./src/ --ext .ts,.tsx --fix",
-    "format": "prettier --write --ignore-unknown ./src/ --ext .ts,.tsx",
+    "lint": "npx eslint 'src/**' --ignore-pattern 'src/assets/**' --fix",
+    "format": "prettier --write --ignore-unknown 'src/**'",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "**/*": [
+    "**/*.{ts,tsx,js}": [
       "npm run lint",
       "npm run format",
       "npm run test"
