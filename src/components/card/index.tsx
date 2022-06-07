@@ -28,7 +28,7 @@ function CardTitle() {
           variant="body1"
           color="text.primary"
         >
-          Entry
+          Ingress
         </Typography>
         <Typography
           style={{

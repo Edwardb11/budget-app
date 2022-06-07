@@ -3,3 +3,8 @@ export interface User {
   name: string
   email: string
 }
+
+export const ACTION_TYPES = {
+  add: 'add',
+  delete: 'delete'
+}
