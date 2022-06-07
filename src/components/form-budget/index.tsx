@@ -7,7 +7,6 @@ import Select, { SelectChangeEvent } from '@mui/material/Select'
 import { useState } from 'react'
 import { Button } from '@mui/material'
 import { v4 as uuid } from 'uuid'
-import Input from '@mui/material/Input'
 
 interface Props {
   dispatch: Function
@@ -68,7 +67,7 @@ function Formfield({ dispatch }: Props) {
         />
       </FormControl>
       <FormControl sx={{ m: 1, minWidth: 120 }}>
-        <Input
+        <TextField
           name="description"
           value={description}
           onChange={handleChangeDescription}

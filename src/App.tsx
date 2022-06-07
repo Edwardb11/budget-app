@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import { RecoilRoot } from 'recoil'
 import { Layout, Home, About, NoMatch } from './views'
+import './index.css'
 
 function HomeApp() {
   return (
